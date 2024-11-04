@@ -1,6 +1,8 @@
+import LoginPage from "@/pages/LoginPage.vue";
 import MenPage from "@/pages/MenPage.vue";
 import NotFoundPage from "@/pages/NotFoundPage.vue";
 import ProductDetails from "@/pages/ProductDetails.vue";
+import RegisterPage from "@/pages/RegisterPage.vue";
 import WomenPage from "@/pages/WomenPage.vue";
 import Vue from "vue";
 import Router from "vue-router";
@@ -28,6 +30,17 @@ export default new Router({
       path: "/product/:id",
       name: "ProductDetails",
       component: ProductDetails,
+      props: true,
+    },
+    {
+      path: "/login",
+      name: "LoginPage",
+      component: LoginPage,
+    },
+    {
+      path: "/register",
+      name: "RegisterPage",
+      component: RegisterPage,
       props: true,
     },
     {

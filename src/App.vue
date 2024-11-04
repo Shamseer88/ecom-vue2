@@ -1,28 +1,23 @@
 <template>
   <div id="app">
+    <top-navbar />
     <router-view />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import TopNavbar from "./components/TopNavbar.vue";
 
-nav {
-  padding: 30px;
+export default {
+  name: "App",
+  components: {
+    TopNavbar,
+  },
+};
+</script>
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+<style>
+* {
+  font-family: "Rubik", sans-serif;
 }
 </style>
