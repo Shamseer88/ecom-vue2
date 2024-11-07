@@ -8,6 +8,7 @@
       <gender-tab />
       <v-spacer />
       <search-bar />
+      <navbar-icons />
     </v-app-bar>
   </div>
 </template>
@@ -15,9 +16,10 @@
 <script>
 import CategoriesDropdown from "./CategoriesDropdown.vue";
 import GenderTab from "./GenderTab.vue";
+import NavbarIcons from "./NavbarIcons.vue";
 import SearchBar from "./SearchBar.vue";
 export default {
-  components: { CategoriesDropdown, GenderTab, SearchBar },
+  components: { CategoriesDropdown, GenderTab, SearchBar, NavbarIcons },
   name: "SecondaryNavbar",
 };
 </script>
