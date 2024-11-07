@@ -18,6 +18,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+  font-family: "Rubik", serif;
+}
+
 .topNavbarDiv {
   display: flex;
   justify-content: center;
