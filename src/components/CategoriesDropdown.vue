@@ -60,7 +60,7 @@ export default {
 }
 
 .categories-btn {
-  color: black;
+  color: black !important;
   font-size: 1rem;
   font-weight: 400;
 }
