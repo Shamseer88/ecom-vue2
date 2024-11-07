@@ -12,7 +12,9 @@
         :key="category"
         class="category-list-item"
       >
-        <v-list-item-title>{{ category }}</v-list-item-title>
+        <v-list-item-title>
+          <span>{{ category }}</span>
+        </v-list-item-title>
       </v-list-item>
     </v-list>
   </v-menu>
@@ -44,7 +46,6 @@ export default {
           }
         );
         this.categories = response.data.data;
-        console.log("Categories", this.categories);
       } catch (error) {
         console.log(error);
       }
@@ -72,9 +73,5 @@ export default {
 .category-list-item:hover {
   background-color: #f0f0f0;
   cursor: pointer;
-}
-
-.category-list-item:hover .v-list-item-title {
-  font-weight: bold;
 }
 </style>
