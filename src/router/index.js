@@ -1,3 +1,4 @@
+import HomePage from "@/pages/HomePage.vue";
 import LoginPage from "@/pages/LoginPage.vue";
 import MenPage from "@/pages/MenPage.vue";
 import NotFoundPage from "@/pages/NotFoundPage.vue";
@@ -14,7 +15,12 @@ export default new Router({
   routes: [
     {
       path: "/",
-      redirect: "/men",
+      redirect: "/home",
+    },
+    {
+      path: "/home",
+      name: "Home",
+      component: HomePage,
     },
     {
       path: "/men",
