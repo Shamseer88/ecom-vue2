@@ -1,6 +1,6 @@
 <template>
   <div class="secondary-navbar">
-    <v-app-bar>
+    <v-app-bar flat>
       <v-toolbar-title class="logo-title">
         <router-link to="/">SHOP.CO</router-link>
       </v-toolbar-title>

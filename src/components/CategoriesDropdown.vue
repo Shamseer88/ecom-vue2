@@ -21,35 +21,15 @@
 </template>
 
 <script>
-import { projectId, projectUrl } from "@/constants/projectDetails";
-import axios from "axios";
 export default {
   name: "CategoriesDropdown",
-  data() {
-    return {
-      categories: [],
-    };
-  },
-  mounted() {
-    this.getCategories();
-  },
-  methods: {
-    async getCategories() {
-      try {
-        const response = await axios.get(
-          `${projectUrl}/ecommerce/clothes/categories`,
-          {
-            headers: {
-              "Content-Type": "application/json",
-              projectId: projectId,
-            },
-          }
-        );
-        this.categories = response.data.data;
-      } catch (error) {
-        console.log(error);
-      }
+  computed: {
+    categories() {
+      return this.$store.state.categories;
     },
+  },
+  created() {
+    this.$store.dispatch("fetchCategories");
   },
 };
 </script>

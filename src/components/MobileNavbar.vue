@@ -49,16 +49,26 @@
     <v-navigation-drawer v-model="drawer" right temporary absolute>
       <v-list>
         <v-subheader>Gender</v-subheader>
-        <v-list-item :to="{ path: '/men' }" link>
-          <v-list-item-title>Men</v-list-item-title>
+        <v-list-item :to="{ path: '/men' }" link class="category-list-item">
+          <v-list-item-title class="category-list-item-title">
+            Men
+          </v-list-item-title>
         </v-list-item>
-        <v-list-item :to="{ path: '/women' }" link>
-          <v-list-item-title>Women</v-list-item-title>
+        <v-list-item :to="{ path: '/women' }" link class="category-list-item">
+          <v-list-item-title class="category-list-item-title">
+            Women
+          </v-list-item-title>
         </v-list-item>
 
         <v-subheader>Categories</v-subheader>
-        <v-list-item v-for="category in categories" :key="category">
-          <v-list-item-title>{{ category }}</v-list-item-title>
+        <v-list-item
+          v-for="category in categories"
+          :key="category"
+          class="category-list-item"
+        >
+          <v-list-item-title class="category-list-item-title">{{
+            category
+          }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -72,8 +82,12 @@ export default {
     return {
       drawer: false,
       showSearch: false,
-      categories: ["Clothing", "Shoes", "Accessories", "New Arrivals"],
     };
+  },
+  computed: {
+    categories() {
+      return this.$store.state.categories;
+    },
   },
 };
 </script>
@@ -82,11 +96,27 @@ export default {
 .small-icon {
   font-size: 24px;
 }
+
 .small-badge .v-badge__badge {
   font-size: 12px;
   height: 18px;
   min-width: 18px;
 }
+
+.category-list-item {
+  text-transform: capitalize;
+  min-height: 25px !important;
+}
+
+.category-list-item:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.category-list-item-title {
+  font-size: 12px;
+}
+
 @media (min-width: 945px) {
   .mobile-navbar {
     display: none;
