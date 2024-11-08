@@ -2,7 +2,7 @@
   <v-container class="product-grid-container">
     <v-row justify="center">
       <v-col
-        cols="12"
+        cols="6"
         sm="6"
         md="4"
         lg="3"
@@ -103,3 +103,5 @@ export default {
   },
 };
 </script>
+
+<style></style>

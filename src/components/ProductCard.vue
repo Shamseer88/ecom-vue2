@@ -50,4 +50,27 @@ export default {
   font-size: 18px;
   line-height: 1;
 }
+
+@media (max-width: 600px) {
+  .product-card-div {
+    max-width: 128px;
+  }
+
+  .product-img {
+    max-width: 125px;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .product-name {
+    font-size: 12px;
+  }
+
+  .product-rate {
+    font-family: "Candal", sans-serif;
+    color: black;
+    font-size: 13px;
+    line-height: 1;
+  }
+}
 </style>
