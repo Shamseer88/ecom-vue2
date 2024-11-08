@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="secondary-navbar">
     <v-app-bar>
       <v-toolbar-title class="logo-title">
         <router-link to="/">SHOP.CO</router-link>
@@ -31,5 +31,11 @@ export default {
   color: black;
   text-decoration: none;
   font-weight: 800;
+}
+
+@media (max-width: 945px) {
+  .secondary-navbar {
+    display: none;
+  }
 }
 </style>

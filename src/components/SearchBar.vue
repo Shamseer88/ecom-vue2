@@ -4,11 +4,12 @@
       dense
       filled
       solo
+      flat
       color="black"
       hide-details="auto"
       class="py-0 search-text-field"
       placeholder="Search for products..."
-      prepend-inner-icon="mdi-map-marker"
+      prepend-inner-icon="mdi-magnify"
     ></v-text-field>
   </div>
 </template>
