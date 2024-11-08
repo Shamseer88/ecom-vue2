@@ -3,6 +3,9 @@
     <v-responsive class="mobile-navbar" max-width="945">
       <v-app-bar flat dense>
         <v-app-bar-nav-icon @click="drawer = !drawer" />
+        <v-toolbar-title class="logo-title-mobile px-0">
+          <router-link to="/">SHOP.CO</router-link>
+        </v-toolbar-title>
         <v-btn icon @click="showSearch = !showSearch">
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
@@ -93,6 +96,12 @@ export default {
 </script>
 
 <style scoped>
+.logo-title-mobile a {
+  color: black;
+  text-decoration: none;
+  font-weight: 900;
+}
+
 .small-icon {
   font-size: 24px;
 }
